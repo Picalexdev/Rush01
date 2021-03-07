@@ -19,10 +19,10 @@ void write_input_table(char **table);
 char **create_input_table(char *input);
 void write_output_table(char ***output);
 char ***create_output_table();
-void num_checker(char ***output,char **input);
+void num_checker(char ***output, char **input);
 
 
-int main(int count, char **values)
+int     main(int count, char **values)
 {
     char **input_table;
     char ***output_table;
