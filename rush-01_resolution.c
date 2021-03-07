@@ -6,7 +6,7 @@
 /*   By: apico-su <apico-su@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 11:24:16 by apico-su          #+#    #+#             */
-/*   Updated: 2021/03/07 16:09:12 by apico-su         ###   ########.fr       */
+/*   Updated: 2021/03/07 17:01:16 by apico-su         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 void reset_output_table(char ***output)
 {
     int x[3];
-    char num;
 
     x[0] = -1;
    while (++x[0] < 4)

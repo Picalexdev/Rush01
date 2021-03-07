@@ -6,7 +6,7 @@
 /*   By: apico-su <apico-su@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:13:48 by apico-su          #+#    #+#             */
-/*   Updated: 2021/03/07 15:02:57 by apico-su         ###   ########.fr       */
+/*   Updated: 2021/03/07 16:32:27 by apico-su         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(int count, char **values)
     char ***output_table;
 
     input_table = input_numbers(values);
-    if (input_table[0][0] == '0')
+    if (input_table[0][0] == '0' || count < 2)
     {
         write(1, "Error\n", 6);
         exit(0);

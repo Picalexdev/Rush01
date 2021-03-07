@@ -6,7 +6,7 @@
 /*   By: apico-su <apico-su@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:11 by apico-su          #+#    #+#             */
-/*   Updated: 2021/03/07 15:03:23 by apico-su         ###   ########.fr       */
+/*   Updated: 2021/03/07 17:00:56 by apico-su         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,6 @@ char ***create_output_table()
 
 void write_output_table(char ***output)
 {
-    char ***table;
     int x[3];
     char num;
 
