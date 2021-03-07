@@ -6,7 +6,7 @@
 /*   By: apico-su <apico-su@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:13:48 by apico-su          #+#    #+#             */
-/*   Updated: 2021/03/07 11:28:27 by apico-su         ###   ########.fr       */
+/*   Updated: 2021/03/07 13:04:51 by apico-su         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,16 @@
 #include <stdlib.h>
 
 char **input_numbers(char **values);
-char **create_input_table(char *input);
 void write_input_table(char **table);
+char **create_input_table(char *input);
+void write_output_table(char ***output);
+char ***create_output_table();
+
 
 int main(int count, char **values)
 {
     char **input_table;
+    char ***output_table;
 
     input_table = input_numbers(values);
     if (input_table[0][0] == '0')
@@ -29,6 +33,7 @@ int main(int count, char **values)
         exit(0);
     }
     write_input_table(input_table);
+    output_table = create_output_table();
+    write_output_table(output_table);
     return 0;
 }
-

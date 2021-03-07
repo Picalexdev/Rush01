@@ -6,7 +6,7 @@
 /*   By: apico-su <apico-su@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:11 by apico-su          #+#    #+#             */
-/*   Updated: 2021/03/07 11:38:18 by apico-su         ###   ########.fr       */
+/*   Updated: 2021/03/07 13:07:25 by apico-su         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 #include <stdlib.h>
 
 char **create_input_table(char *input);
-char ***create_output_table(char **input);
+char ***create_output_table();
+void write_output_table(char ***output);
 
 char **input_numbers(char **values)
 {
@@ -88,27 +89,47 @@ void write_input_table(char **table)
     }
 }
 
-char ***create_output_table(char **input)
+char ***create_output_table()
 {
     char ***table;
     int x[3];
 
-    table = (char ***) malloc(80); 
+    table = (char ***) malloc(sizeof(char **) * 5); 
     x[0] = -1;
     while (++x[0] < 4)
     {
-        table[x[0]] = (char **)malloc(20);
+        table[x[0]] = (char **)malloc(sizeof(char *) * 4);
         x[1] = -1;
         while (++x[1] < 4)
         {
-            table[x[1]] = (char **)malloc(5);
-            x[2] = -1;
-            while (++x[2] < 5)
-            {
-                table[x[0]][x[1]] = input[x[2]];
-            }
+            table[x[0]][x[1]] = (char *)malloc(sizeof(char) * 5);
         }
     }
     return table;
 }
+
+void write_output_table(char ***output, )
+{
+    char ***table;
+    int x[3];
+    char num;
+
+    x[0] = -1;
+    num = '0';
+   while (++x[0] < 4)
+    {
+        x[1] = -1;
+        while (++x[1] < 4)
+        {
+            x[2] = -1;
+            while (++x[2] < 5)
+            {   
+                table[x[0]][x[1]][x[2]] = '1';
+                num = table[x[0]][x[1]][x[2]];
+                write(1, &num, 1);
+            }
+            write(1, " ", 1);
+        }
+        write(1, "\n", 1);
+    }
 }
