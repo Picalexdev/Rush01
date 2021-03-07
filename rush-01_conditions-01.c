@@ -6,7 +6,7 @@
 /*   By: apico-su <apico-su@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 16:00:45 by apico-su          #+#    #+#             */
-/*   Updated: 2021/03/07 16:11:38 by apico-su         ###   ########.fr       */
+/*   Updated: 2021/03/07 16:19:09 by apico-su         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 void reset_output_table(char ***output);
 void num_checker_1(char ***output,char **input,int num);
-void seguro(char ***output, char num, int fila, int columna);
 void num_checker_2(char ***output,char **input,int num);
 
 void num_checker(char ***output,char **input)
@@ -51,8 +50,14 @@ void seguro(char ***output, char num, int fila, int columna)
 
 }
 
-void posible(char ***output, char num, int fila, int columna)
+void posible(char ***output, char num1, int num2, int fila, int columna)
 {
+     int x;
+
+      x = num1 - '0';
+      output[fila][columna][x] = num1;
+      x = num2 - '0';
+      output[fila][columna][x] = num2;
 
 }
 
