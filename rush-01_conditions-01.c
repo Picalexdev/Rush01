@@ -6,7 +6,7 @@
 /*   By: apico-su <apico-su@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 16:00:45 by apico-su          #+#    #+#             */
-/*   Updated: 2021/03/07 16:02:56 by apico-su         ###   ########.fr       */
+/*   Updated: 2021/03/07 16:11:38 by apico-su         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,19 @@ void num_checker(char ***output,char **input)
 void seguro(char ***output, char num, int fila, int columna)
 {
     int x;
+    int z;
     
     x = num - '0';
+    z = 0;
+    while (++z < 5)
+        output[fila][columna][z] = '0';
     output[fila][columna][x] = num;
     output[fila][columna][0] = '1';
+
+}
+
+void posible(char ***output, char num, int fila, int columna)
+{
 
 }
 
