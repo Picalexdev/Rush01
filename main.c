@@ -6,7 +6,7 @@
 /*   By: apico-su <apico-su@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:13:48 by apico-su          #+#    #+#             */
-/*   Updated: 2021/03/07 14:28:17 by apico-su         ###   ########.fr       */
+/*   Updated: 2021/03/07 15:02:57 by apico-su         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int main(int count, char **values)
     write_input_table(input_table);
     output_table = create_output_table();
     num_checker(output_table, input_table);
+    write_output_table(output_table);
 
     return 0;
 }

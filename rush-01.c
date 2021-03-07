@@ -6,7 +6,7 @@
 /*   By: apico-su <apico-su@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 09:14:11 by apico-su          #+#    #+#             */
-/*   Updated: 2021/03/07 14:25:16 by apico-su         ###   ########.fr       */
+/*   Updated: 2021/03/07 15:03:23 by apico-su         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,8 +124,7 @@ void write_output_table(char ***output)
             x[2] = -1;
             while (++x[2] < 5)
             {   
-                table[x[0]][x[1]][x[2]] = '0';
-                num = table[x[0]][x[1]][x[2]];
+                num = output[x[0]][x[1]][x[2]];
                 write(1, &num, 1);
             }
             write(1, " ", 1);
